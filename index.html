@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBG Printer</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+        *{
+        font-family: monospace;
+        margin: 0 auto;
+        padding: 0;
+        text-align: justify;
+        word-wrap: break-word;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        filter: grayscale(100);
+    }
+    .container{
+        text-align: center;
+        min-height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2em;
+    }
+    input{
+        margin: 0 0 10px;
+        width: 177px;
+        text-align: center;
+        background-color: #f3f3f3;
+    }
+    button{
+        cursor: pointer;
+        background-color: #f3f3f3;
+        width: 177px;
+        text-align: center;
+    }
+    input, h1, button{
+        border-radius: 2px;
+        padding: 10px;
+        font-weight: bold;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NBG Printer</h1>
+        <input type="number" placeholder="Insert a number" id="msg">
+        <button onclick="displayMessage()">Print and add</button>
+        <p id="showinputhere"></p>
+    </div>
+    <div id="number-container"></div>
+    <script>
+        function displayMessage(){
+            let themsg = document.getElementById("msg").value;
+            if (themsg){
+                var i  
+                for (i = 0 ; i <= themsg ; i++) { 
+                    document.getElementById("number-container").innerHTML += i;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
